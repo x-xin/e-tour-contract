@@ -1,16 +1,16 @@
 <template>
-	<div>home</div>
+  <div>guidemessmanage</div>
 </template>
 <script>
 export default {
-  name: 'home',
+  name: 'guidemessmanage',
   dada () {
     return {
-      aa: 'hah'
+      //
     }
   }
 }
 </script>
 <script lang="stylus">
-	
+  
 </script>

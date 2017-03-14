@@ -1,16 +1,16 @@
 <template>
-	<div>home</div>
+  <div>userbankmanage</div>
 </template>
 <script>
 export default {
-  name: 'home',
+  name: 'userbankmanage',
   dada () {
     return {
-      aa: 'hah'
+      //
     }
   }
 }
 </script>
 <script lang="stylus">
-	
+  
 </script>
