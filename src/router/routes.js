@@ -64,7 +64,7 @@ const routes = [
     icon: 'e-icon-name',
     children: [
       {
-        name: '报名管理',
+        name: '管理报名',
         path: '/regmanage',
         component: RegManage
       }
@@ -77,7 +77,7 @@ const routes = [
     icon: 'e-icon-contract',
     children: [
       {
-        name: '合同管理',
+        name: '管理合同',
         path: '/contractmanage',
         component: ContractManage
       }
