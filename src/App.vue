@@ -12,6 +12,5 @@ export default {
 
 <style lang="stylus" scoped>
   #app 
-    background-color #ccc
-    box-shadow 10px 10px 10px #000
+    background-color #ecf0f5
 </style>

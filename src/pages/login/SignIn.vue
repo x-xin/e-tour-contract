@@ -1,5 +1,7 @@
 <template>
-  <div>SignIn</div>
+  <div>
+    <div>SignIn</div>
+  </div>
 </template>
 <script>
 export default {
@@ -11,6 +13,6 @@ export default {
   }
 }
 </script>
-<script lang="stylus">
+<style lang="stylus">
   
-</script>
+</style>

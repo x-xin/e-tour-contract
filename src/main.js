@@ -9,7 +9,9 @@ import './stylus/style.styl'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-const app = new Vue({
-  router: router,
-  render: h => h(App)
-}).$mount('#app')
+new Vue({
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
+})

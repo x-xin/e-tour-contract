@@ -11,6 +11,6 @@ export default {
   }
 }
 </script>
-<script lang="stylus">
+<style lang="stylus">
   
-</script>
+</style>

@@ -1,25 +1,3 @@
-import Base from '@/pages/Base'
-
-import Home from '@/pages/Home'
-
-import SignIn from '@/pages/login/SignIn'
-import SignUp from '@/pages/login/SignUp'
-import Password from '@/pages/login/Password'
-
-import RegManage from '@/pages/page/RegManage'
-import ContractManage from '@/pages/page/ContractManage'
-import GroupManage from '@/pages/page/GroupManage'
-import LineManage from '@/pages/page/LineManage'
-import GuideMessManage from '@/pages/page/GuideMessManage'
-import ContractCount from '@/pages/page/ContractCount'
-import TeamCount from '@/pages/page/TeamCount'
-import StoreManage from '@/pages/page/StoreManage'
-import ContractShareManage from '@/pages/page/ContractShareManage'
-import UserBankManage from '@/pages/page/UserBankManage'
-import CompanyMess from '@/pages/page/CompanyMess'
-import Roles from '@/pages/page/Roles'
-import UserManage from '@/pages/page/UserManage'
-
 const routes = [
   {
     path: '/',
@@ -29,152 +7,152 @@ const routes = [
   {
     name: '登录',
     path: '/signin',
-    component: SignIn,
+    component: resolve => require(['@/pages/login/SignIn'], resolve),
     hidden: true
   },
   {
     name: '注册',
     path: '/signup',
-    component: SignUp,
+    component: resolve => require(['@/pages/login/SignUp'], resolve),
     hidden: true
   },
   {
     name: '找回密码',
     path: '/password',
-    component: Password,
+    component: resolve => require(['@/pages/login/Password'], resolve),
     hidden: true
   },
   {
     name: '首页',
     path: '/',
-    component: Base,
+    component: resolve => require(['@/pages/Base'], resolve),
     icon: 'e-icon-home',
     children: [
       {
-        name: '首页部分',
+        name: '首页引导',
         path: '/home',
-        component: Home
+        component: resolve => require(['@/pages/Home'], resolve)
       }
     ]
   },
   {
     name: '报名管理',
     path: '/',
-    component: Base,
+    component: resolve => require(['@/pages/Base'], resolve),
     icon: 'e-icon-name',
     children: [
       {
         name: '管理报名',
         path: '/regmanage',
-        component: RegManage
+        component: resolve => require(['@/pages/page/RegManage'], resolve)
       }
     ]
   },
   {
     name: '合同管理',
     path: '/',
-    component: Base,
+    component: resolve => require(['@/pages/Base'], resolve),
     icon: 'e-icon-contract',
     children: [
       {
         name: '管理合同',
         path: '/contractmanage',
-        component: ContractManage
+        component: resolve => require(['@/pages/page/ContractManage'], resolve)
       }
     ]
   },
   {
     name: '线路管理',
     path: '/',
-    component: Base,
+    component: resolve => require(['@/pages/Base'], resolve),
     icon: 'e-icon-contract',
     children: [
       {
         name: '团期管理',
         path: '/groupmanage',
-        component: GroupManage
+        component: resolve => require(['@/pages/page/GroupManage'], resolve)
       },
       {
         name: '线路及形成模板',
         path: '/linemanage',
-        component: LineManage
+        component: resolve => require(['@/pages/page/LineManage'], resolve)
       }
     ]
   },
   {
     name: '导游管理',
     path: '/',
-    component: Base,
+    component: resolve => require(['@/pages/Base'], resolve),
     icon: 'e-icon-contract',
     children: [
       {
         name: '导游信息管理',
         path: '/guidemessmanage',
-        component: GuideMessManage
+        component: resolve => require(['@/pages/page/GuideMessManage'], resolve)
       }
     ]
   },
   {
     name: '统计管理',
     path: '/',
-    component: Base,
+    component: resolve => require(['@/pages/Base'], resolve),
     icon: 'e-icon-count',
     children: [
       {
         name: '合同使用统计',
         path: '/contractcount',
-        component: ContractCount
+        component: resolve => require(['@/pages/page/ContractCount'], resolve)
       },
       {
         name: '团队信息统计',
         path: '/teamcount',
-        component: TeamCount
+        component: resolve => require(['@/pages/page/TeamCount'], resolve)
       }
     ]
   },
   {
     name: '门店设置',
     path: '/',
-    component: Base,
+    component: resolve => require(['@/pages/Base'], resolve),
     icon: 'e-icon-set',
     children: [
       {
         name: '门店管理',
         path: '/storemanage',
-        component: StoreManage
+        component: resolve => require(['@/pages/page/StoreManage'], resolve)
       }
     ]
   },
   {
     name: '系统管理',
     path: '/',
-    component: Base,
+    component: resolve => require(['@/pages/Base'], resolve),
     icon: 'e-icon-set',
     children: [
       {
         name: '合同份额管理',
         path: '/contractsharemanage',
-        component: ContractShareManage
+        component: resolve => require(['@/pages/page/ContractShareManage'], resolve)
       },
       {
         name: '用户银行管理',
         path: '/userbankmanage',
-        component: UserBankManage
+        component: resolve => require(['@/pages/page/UserBankManage'], resolve)
       },
       {
         name: '企业信息',
         path: '/companymess',
-        component: CompanyMess
+        component: resolve => require(['@/pages/page/CompanyMess'], resolve)
       },
       {
         name: '角色列表',
         path: '/roles',
-        component: Roles
+        component: resolve => require(['@/pages/page/Roles'], resolve)
       },
       {
         name: '用户管理',
         path: '/usermanage',
-        component: UserManage
+        component: resolve => require(['@/pages/page/UserManage'], resolve)
       }
     ]
   }
