@@ -74,7 +74,7 @@ const routes = [
         component: resolve => require(['@/pages/page/GroupManage'], resolve)
       },
       {
-        name: '线路及形成模板',
+        name: '线路及行程模板',
         path: '/linemanage',
         component: resolve => require(['@/pages/page/LineManage'], resolve)
       }

@@ -33,6 +33,7 @@ export default {
   color #fff
   background-color #0e2f47
   z-index 5
+  overflow hidden
   .logo
     padding-left 20px
     span

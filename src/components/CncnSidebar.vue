@@ -69,6 +69,9 @@ export default {
         line-height 44px
         border-left 4px solid #2a3542
         color #b8c7ce
+        [class^=el-icon-]
+          margin-left -10px
+          margin-right 8px
         &:hover
           border-left 4px solid #48576a
           background-color #48576a
@@ -77,6 +80,9 @@ export default {
           border-left 4px solid #47a3ff
           background-color #1b405d
       .el-submenu
+        [class^=el-icon-]
+          margin-left -10px
+          margin-right 8px
         &.is-active
           background-color #1b405d
           .el-submenu__title
