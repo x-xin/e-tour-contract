@@ -45,4 +45,11 @@ export default {
   top 50px
   bottom 0px
   background-color #2a3542
+  overflow: hidden
+  .el-col-24
+    width auto
+    height 100%
+    overflow-x auto
+    .menu
+      width 150px
 </style>

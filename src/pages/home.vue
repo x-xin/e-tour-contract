@@ -1,11 +1,12 @@
 <template>
 	<div class="cncn-main-wrap">
-    <cncn-main></cncn-main>
+    <div class="cncn-main">
+      home
+    </div>
     <cncn-footer></cncn-footer>
   </div>
 </template>
 <script>
-import CncnMain from '@/components/CncnMain'
 import CncnFooter from '@/components/CncnFooter'
 export default {
   name: 'home',
@@ -15,11 +16,10 @@ export default {
     }
   },
   components: {
-    CncnMain, CncnFooter
+    CncnFooter
   }
 }
 </script>
 <style lang="stylus">
-  .cncn-main-wrap
-    margin-left 150px
+  //
 </style>

@@ -1,13 +1,22 @@
 <template>
-  <div>linemanage</div>
+  <div class="cncn-main-wrap">
+    <div class="cncn-main">
+      linemanage
+    </div>
+    <cncn-footer></cncn-footer>
+  </div>
 </template>
 <script>
+import CncnFooter from '@/components/CncnFooter'
 export default {
   name: 'linemanage',
   dada () {
     return {
       //
     }
+  },
+  components: {
+    CncnFooter
   }
 }
 </script>
