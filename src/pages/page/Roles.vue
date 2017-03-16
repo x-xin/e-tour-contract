@@ -1,9 +1,13 @@
 <template>
   <div class="cncn-main-wrap">
-    <div class="cncn-main">
-      roles
+    <div class="cncn-main-wrap-2">
+      <div class="cncn-main">
+        <div class="cncn-main-con">
+          roles
+        </div>
+      </div>
+      <cncn-footer></cncn-footer>
     </div>
-    <cncn-footer></cncn-footer>
   </div>
 </template>
 <script>

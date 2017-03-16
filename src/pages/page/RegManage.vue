@@ -1,9 +1,13 @@
 <template>
   <div class="cncn-main-wrap">
-    <div class="cncn-main">
-      regmanage
+    <div class="cncn-main-wrap-2">
+      <div class="cncn-main">
+        <div class="cncn-main-con">
+          regmanage
+        </div>
+      </div>
+      <cncn-footer></cncn-footer>
     </div>
-    <cncn-footer></cncn-footer>
   </div>
 </template>
 <script>

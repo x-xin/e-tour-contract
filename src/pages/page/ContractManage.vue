@@ -1,9 +1,13 @@
 <template>
   <div class="cncn-main-wrap">
-    <div class="cncn-main">
-      contractmanage
+    <div class="cncn-main-wrap-2">
+      <div class="cncn-main">
+        <div class="cncn-main-con">
+          contractmanage
+        </div>
+      </div>
+      <cncn-footer></cncn-footer>
     </div>
-    <cncn-footer></cncn-footer>
   </div>
 </template>
 <script>

@@ -1,9 +1,13 @@
 <template>
   <div class="cncn-main-wrap">
-    <div class="cncn-main">
-      contractsharemanage
+    <div class="cncn-main-wrap-2">
+      <div class="cncn-main">
+        <div class="cncn-main-con">
+          contractsharemanage
+        </div>
+      </div>
+      <cncn-footer></cncn-footer>
     </div>
-    <cncn-footer></cncn-footer>
   </div>
 </template>
 <script>
