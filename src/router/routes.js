@@ -27,7 +27,7 @@ const routes = [
     component: resolve => require(['@/pages/Base'], resolve),
     single: true,
     singleClass: 'menu-item-single',
-    icon: 'el-icon-setting',
+    icon: 'el-icon-menu',
     children: [
       {
         name: '首页',
@@ -40,7 +40,7 @@ const routes = [
     name: '报名管理',
     path: '/',
     component: resolve => require(['@/pages/Base'], resolve),
-    icon: 'el-icon-setting',
+    icon: 'el-icon-plus',
     children: [
       {
         name: '管理报名',
@@ -53,7 +53,7 @@ const routes = [
     name: '合同管理',
     path: '/',
     component: resolve => require(['@/pages/Base'], resolve),
-    icon: 'el-icon-setting',
+    icon: 'el-icon-document',
     children: [
       {
         name: '管理合同',
@@ -66,7 +66,7 @@ const routes = [
     name: '线路管理',
     path: '/',
     component: resolve => require(['@/pages/Base'], resolve),
-    icon: 'el-icon-setting',
+    icon: 'el-icon-time',
     children: [
       {
         name: '团期管理',
@@ -84,7 +84,7 @@ const routes = [
     name: '导游管理',
     path: '/',
     component: resolve => require(['@/pages/Base'], resolve),
-    icon: 'el-icon-setting',
+    icon: 'el-icon-edit',
     children: [
       {
         name: '导游信息管理',
@@ -97,7 +97,7 @@ const routes = [
     name: '统计管理',
     path: '/',
     component: resolve => require(['@/pages/Base'], resolve),
-    icon: 'el-icon-setting',
+    icon: 'el-icon-document',
     children: [
       {
         name: '合同使用统计',
@@ -128,7 +128,7 @@ const routes = [
     name: '系统管理',
     path: '/',
     component: resolve => require(['@/pages/Base'], resolve),
-    icon: 'el-icon-setting',
+    icon: 'el-icon-message',
     children: [
       {
         name: '合同份额管理',
