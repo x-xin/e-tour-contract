@@ -11,6 +11,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  #app 
-    background-color #ecf0f5
+  #app
+    height 100%
 </style>
