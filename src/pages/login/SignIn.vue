@@ -52,16 +52,16 @@ export default {
       left 50%
       top 50%
       margin-left 100px
-      margin-top -160px
-      padding 0 40px 50px
-      width 320px
-      height 327px
+      margin-top -100px
+      padding 0 40px 40px
+      width 300px
+      height 310px
       background-color #fff
       border-radius 8px
       box-shadow 0 1px 6px 0 #375b86, 0 1px 6px 0 rgba(255,255,255,0.2)
       h3
-        height 88px
-        line-height 88px
+        height 80px
+        line-height 80px
         color #666
         font-size 28px
         text-align center
