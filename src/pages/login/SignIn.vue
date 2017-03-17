@@ -47,15 +47,16 @@ export default {
     background #1879d4 url('../../assets/signin_bg.png') center center no-repeat
     background-size cover
     position relative
+    overflow hidden
     .signin_main
       position absolute
       left 50%
       top 50%
       margin-left 100px
-      margin-top -100px
+      margin-top -110px
       padding 0 40px 40px
       width 300px
-      height 310px
+      height 302px
       background-color #fff
       border-radius 8px
       box-shadow 0 1px 6px 0 #375b86, 0 1px 6px 0 rgba(255,255,255,0.2)
@@ -66,9 +67,9 @@ export default {
         font-size 28px
         text-align center
       .signin_item
-        margin-bottom 27px
+        margin-bottom 24px
       .signin_guide
-        height 36px
+        height 30px
         .reg,.psw
           font-size 14px
           color #248ef2
@@ -104,4 +105,29 @@ export default {
       color #cee0fa
       font-size 14px
       text-align center
+  
+  @media only screen and (max-width: 1280px)
+    .signin_main
+      width 200px !important
+      height 250px !important
+      padding 0 20px 20px !important
+      .signin_item
+        margin-bottom 21px !important
+      .signin-input
+        input
+          height 40px !important
+          line-height 40px !important
+      h3
+        height 50px !important
+        line-height 50px !important
+        font-size 20px !important
+  @media only screen and (max-width: 1440px) and (min-width: 1280px)
+    .signin_main
+      width 250px !important
+      height 290px !important
+      padding 0 30px 30px !important
+      h3
+        height 65px !important
+        line-height 65px !important
+        font-size 24px !important
 </style>
