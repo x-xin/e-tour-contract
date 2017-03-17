@@ -105,29 +105,4 @@ export default {
       color #cee0fa
       font-size 14px
       text-align center
-  
-  @media only screen and (max-width: 1280px)
-    .signin_main
-      width 200px !important
-      height 250px !important
-      padding 0 20px 20px !important
-      .signin_item
-        margin-bottom 21px !important
-      .signin-input
-        input
-          height 40px !important
-          line-height 40px !important
-      h3
-        height 50px !important
-        line-height 50px !important
-        font-size 20px !important
-  @media only screen and (max-width: 1440px) and (min-width: 1280px)
-    .signin_main
-      width 250px !important
-      height 265px !important
-      padding 0 30px 30px !important
-      h3
-        height 65px !important
-        line-height 65px !important
-        font-size 24px !important
 </style>
