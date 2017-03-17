@@ -124,7 +124,7 @@ export default {
   @media only screen and (max-width: 1440px) and (min-width: 1280px)
     .signin_main
       width 250px !important
-      height 290px !important
+      height 265px !important
       padding 0 30px 30px !important
       h3
         height 65px !important
