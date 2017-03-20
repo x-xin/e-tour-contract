@@ -1,30 +1,35 @@
 <template>
   <div class="signin">
-    <el-form :model="loginForm" :rules="rules" ref="loginForm" label-width="0px" class="signin_main">
+    <el-form :model="signinForm" :rules="rules" ref="signinForm" label-width="0px" class="signin_main">
       <h3 class="title">欢迎登录</h3>
       <el-form-item prop="account" class="signin_item">
-        <el-input type="text" class="signin-input" v-model="loginForm.account" auto-complete="off" placeholder="请输入账号"></el-input>
+        <el-input type="text" class="signin-input" v-model="signinForm.account" auto-complete="off" placeholder="请输入账号"></el-input>
       </el-form-item>
-      <el-form-item>
-        <el-input type="text" class="signin-input" v-model="loginForm.checkPass" auto-complete="off" placeholder="请输入密码"></el-input>
+      <el-form-item prop="checkPass" class="signin_item">
+        <el-input type="password" class="signin-input" v-model="signinForm.checkPass" auto-complete="off" placeholder="请输入密码"></el-input>
       </el-form-item>
       <el-row class="signin_guide">
-        <el-col :span="12" class="reg">注册账户</el-col>
-        <el-col :span="12" class="psw">找回密码</el-col>
+        <el-col :span="12" class="reg">
+          <router-link to="/signup">注册账户</router-link>
+        </el-col>
+        <el-col :span="12" class="psw">
+          <router-link to="/password">找回密码</router-link>
+        </el-col>
       </el-row>
       <el-form-item>
-        <el-button type="primary" class="signin-btn" @click.native.prevent="handleSubmit">登录</el-button>
+        <el-button type="primary" class="signin-btn" @click.native.prevent="handleSubmit" v-loading="loading">登录</el-button>
       </el-form-item>
     </el-form>
     <div class="signin_footer">技术支持：欣欣信息有限公司&福建智慧旅游有限公司&emsp;合作伙伴：厦门市美亚柏科信息股份有限公司</div>
   </div>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'signin',
   data () {
     return {
-      loginForm: {
+      signinForm: {
         account: '',
         checkPass: ''
       },
@@ -35,8 +40,53 @@ export default {
         checkPass: [
           { required: true, message: '请输入密码', trigger: 'blur' }
         ]
-      },
-      checked: true
+      }
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'loading', 'account'
+    ])
+  },
+  methods: {
+    ...mapActions([
+      'postLogin'
+    ]),
+    handleSubmit () {
+      this.$refs.signinForm.validate((valid) => {
+        if (valid) {
+          let loginParams = {
+            username: this.signinForm.account,
+            password: this.signinForm.checkPass
+          }
+          let _this = this
+          this.postLogin({
+
+            params: loginParams,
+            success (res) {
+              if (res.data.code === 1) {
+                // 路由跳转
+                console.log(res.data.code)
+                sessionStorage.setItem('user', _this.account)
+                _this.$router.replace('/home')
+              } else {
+                console.log(res.data.code)
+                _this.$notify({
+                  title: '错误',
+                  message: res.data.msg,
+                  type: 'error'
+                })
+              }
+            },
+            error (res) {
+              console.log(res)
+            }
+          })
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
     }
   }
 }
@@ -105,4 +155,13 @@ export default {
       color #cee0fa
       font-size 14px
       text-align center
+      
+  @media only screen and (max-width: 1440px) and (min-width: 1280px)
+    .signin_main
+      transform scale(.9)
+      transform-origin 0 120px
+  @media only screen and (max-width: 1280px)
+    .signin_main
+      transform scale(.8)
+      transform-origin 0 120px
 </style>

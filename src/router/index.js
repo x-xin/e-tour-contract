@@ -4,7 +4,18 @@ import Routes from './routes'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: Routes
 })
+
+const user = sessionStorage.getItem('user')
+router.beforeEach((to, from, next) => {
+  if (!user && to.path !== '/signin' && to.path !== '/signup' && to.path !== '/password') {
+    next({ path: '/signin' })
+  } else {
+    next()
+  }
+})
+
+export default router
