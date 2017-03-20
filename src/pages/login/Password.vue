@@ -1,10 +1,50 @@
 <template>
-  <div class="password">
-    <cncn-header></cncn-header>
-    <div class="password-con">
-      signup-con
+  <div class="cncn-sign-system password">
+    <div class="cncn-sign-system-wrap">
+      <cncn-header></cncn-header>
+      <div class="cncn-sign-system-con">
+        <div class="cncn-sign-system-main password-main">
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+          <p>password</p>
+        </div>
+      </div>
+      <cncn-footer></cncn-footer>
     </div>
-    <cncn-footer></cncn-footer>
   </div>
 </template>
 <script>
@@ -24,5 +64,5 @@ export default {
 }
 </script>
 <style lang="stylus">
-  
+
 </style>

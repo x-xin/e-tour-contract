@@ -1,19 +1,49 @@
 <template>
-  <div class="signup">
-    <cncn-header></cncn-header>
-    <div class="signup-wrap">
-      <div class="signup-con">
-        <div>signup-con</div>
-        <div>signup-con</div>
-        <div>signup-con</div>
-        <div>signup-con</div>
-        <div>signup-con</div>
-        <div>signup-con</div>
-        <div>signup-con</div>
-        <div>signup-con</div>
+  <div class="cncn-sign-system signup">
+    <div class="cncn-sign-system-wrap">
+      <cncn-header></cncn-header>
+      <div class="cncn-sign-system-con">
+        <div class="cncn-sign-system-main signup-main">
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+          <p>signup-main</p>
+        </div>
       </div>
+      <cncn-footer></cncn-footer>
     </div>
-    <cncn-footer></cncn-footer>
   </div>
 </template>
 <script>
@@ -33,17 +63,5 @@ export default {
 }
 </script>
 <style lang="stylus">
-  .signup
-    min-height 100%
-    position relative
-    background-color #ecf0f5
-    .signup-wrap
-      // margin 64px 46px 74px
-      position absolute
-      top 64px
-      left 0px
-      width 100%
-      .signup-con
-        margin 0px 46px
-        background-color #fff
+
 </style>
