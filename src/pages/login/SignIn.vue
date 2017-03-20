@@ -24,14 +24,15 @@
   </div>
 </template>
 <script>
+import { requestSignin } from '../../api'
 import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'signin',
   data () {
     return {
       signinForm: {
-        account: '',
-        checkPass: ''
+        account: 'Roda',
+        checkPass: '123456'
       },
       rules: {
         account: [
@@ -135,6 +136,8 @@ export default {
           color #666
           &::placeholder
             color #e0e0e0
+          &:-webkit-autofill
+            box-shadow 0 0 0px 1000px white inset
       
       .signin-btn
         width 100%

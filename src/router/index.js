@@ -9,13 +9,4 @@ const router = new Router({
   routes: Routes
 })
 
-const user = sessionStorage.getItem('user')
-router.beforeEach((to, from, next) => {
-  if (!user && to.path !== '/signin' && to.path !== '/signup' && to.path !== '/password') {
-    next({ path: '/signin' })
-  } else {
-    next()
-  }
-})
-
 export default router

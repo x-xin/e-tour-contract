@@ -10,10 +10,18 @@ import './stylus/style.styl'
 
 Vue.config.productionTip = false
 
+router.beforeEach((to, from, next) => {
+  if (!store.state.isLogin && to.path !== '/signin' && to.path !== '/signup' && to.path !== '/password') {
+    next({ path: '/signin' })
+  } else {
+    next()
+  }
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
+  router: router,
   store,
   template: '<App/>',
   components: { App }

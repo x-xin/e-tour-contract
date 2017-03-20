@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'SIGN_ACCOUNT'
+      'ALL_ISLOGIN', 'SIGN_ACCOUNT'
     ]),
     exit () {
       this.$confirm('确认退出登录', '提示', {
@@ -35,6 +35,9 @@ export default {
         type: 'warning'
       }).then(() => {
         sessionStorage.removeItem('user')
+        this.ALL_ISLOGIN({
+          isLogin: false
+        })
         this.SIGN_ACCOUNT({
           account: ''
         })

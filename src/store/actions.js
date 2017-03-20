@@ -1,5 +1,5 @@
 import { requestSignin } from '../api'
-import { SIGN_ACCOUNT, ALL_LOADING } from './types'
+import { ALL_ISLOGIN, SIGN_ACCOUNT, ALL_LOADING } from './types'
 
 export default {
   postLogin ({ commit, state }, { params, success, error }) {
@@ -8,6 +8,7 @@ export default {
       .then(res => {
         if (res.data.user) {
           commit(SIGN_ACCOUNT, { account: res.data.user.username })
+          commit(ALL_ISLOGIN, { isLogin: true })
         }
         success && success(res)
         commit(ALL_LOADING, { isShowLoading: false })
