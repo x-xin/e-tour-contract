@@ -11,11 +11,16 @@ import './stylus/style.styl'
 Vue.config.productionTip = false
 
 router.beforeEach((to, from, next) => {
+  console.log(to.path)
+  if (to.path === '/signin' || to.path === '/signup' || to.path === '/password') {
+    store.state.isLogin = false
+    store.state.account = ''
+    sessionStorage.removeItem('user')
+  }
   if (!store.state.isLogin && to.path !== '/signin' && to.path !== '/signup' && to.path !== '/password') {
     next({ path: '/signin' })
-  } else {
-    next()
   }
+  next()
 })
 
 /* eslint-disable no-new */

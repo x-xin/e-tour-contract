@@ -3,15 +3,21 @@
     <el-col :span="14" class="logo">
       <span>欣欣旅游电子合同系统<em>&nbsp;&nbsp;安全&nbsp;&nbsp;有效&nbsp;&nbsp;便捷</em></span>
     </el-col>
-    <el-col :span="10" class="quit">
+    <el-col :span="10" class="quit" v-if="isLogin">
       <span>您好，{{ account }}</span>&emsp; | &emsp;
       <el-button type="text" @click="exit">退出登录</el-button>
+    </el-col>
+    <el-col :span="10" class="go-to-signin" v-else>
+      <router-link to="/signin">返回登录</router-link>
     </el-col>
   </el-row>
 </template>
 
 <script>
 import { mapMutations, mapGetters } from 'vuex'
+
+const user = sessionStorage.getItem('user')
+
 export default {
   name: 'header',
   data () {
@@ -22,7 +28,10 @@ export default {
   computed: {
     ...mapGetters([
       'account'
-    ])
+    ]),
+    isLogin () {
+      return this.$store.state.isLogin
+    }
   },
   methods: {
     ...mapMutations([
@@ -76,4 +85,10 @@ export default {
     padding-right 20px
     text-align right
     font-size 14px
+  .go-to-signin
+    padding-right 20px
+    text-align right
+    font-size 14px
+    a
+      color #fff
 </style>

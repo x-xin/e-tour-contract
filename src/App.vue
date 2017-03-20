@@ -7,12 +7,7 @@
 <script>
 const user = sessionStorage.getItem('user')
 export default {
-  name: 'app',
-  watch: {
-    '$route' (to, from) { // 监听路由改变
-      console.log(to, from)
-    }
-  }
+  name: 'app'
 }
 </script>
 

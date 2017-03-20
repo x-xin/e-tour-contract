@@ -22,7 +22,6 @@
     height 59px
     line-height 59px
     border-top 1px solid #dde1e6
-    background-color #fff
     overflow hidden
     p
       margin-left 150px
