@@ -1,10 +1,11 @@
+@import '../lib/mixins.styl'
+
 html
   height 100%
-  
 body
   height 100%
   background-color #f1f1f1
-  
+    
 .cncn-main-wrap
   width 100%
   height calc(100% - 50px)
@@ -40,7 +41,43 @@ body
     .cncn-header
       position absolute
     .cncn-footer
+      border none
       p
         margin-left 0px
     .cncn-sign-system-main
+      padding 0 13px
       background-color #fff
+      overflow hidden
+      
+.cncn-progress
+  padding 40px 0px 63px
+  .el-col
+    height 36px
+    line-height @height
+    position relative
+    text-align center
+    color #666
+    font-size 14px
+  .cncn-progress-base
+    background-color #ccc
+    .arrow-right
+      position absolute
+      top 0px
+      right -15px
+      triangle(right, 18px, #ccc)
+      z-index 2
+    .arrow-left
+      position absolute
+      top 0px
+      left 3px
+      triangle(right, 18px, #fff)
+    &.cncn-progress-current
+      background-color #00c0ef
+      color #fff
+      .arrow-right
+        triangle(right, 18px, #00c0ef)
+    &.cncn-progress-complate
+      background-color #03a4d9
+      color #fff
+      .arrow-right
+        triangle(right, 18px, #03a4d9)
