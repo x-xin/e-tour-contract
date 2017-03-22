@@ -14,7 +14,7 @@
 import CncnFooter from '@/components/CncnFooter'
 export default {
   name: 'contractsharemanage',
-  dada () {
+  data () {
     return {
       //
     }
