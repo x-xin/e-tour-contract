@@ -24,15 +24,15 @@
           <h1>您正在使用邮箱验证码找回密码，请完成以下操作</h1>
           <el-form :model="passwordForm" :rules="rules" ref="passwordForm" label-width="110px" class="signup-password-form">
             <el-form-item label="您的邮箱：" prop="email">
-              <el-input type="email" v-model="passwordForm.email" auto-complete="off" placeholder="请输入注册的邮箱"></el-input>
+              <el-input type="email" size="large" v-model="passwordForm.email" auto-complete="off" placeholder="请输入注册的邮箱"></el-input>
             </el-form-item>
             <el-form-item label="邮箱验证码：" prop="code">
-              <el-input type="text" v-model="passwordForm.code" auto-complete="off" placeholder="请输入6位邮箱验证码">
+              <el-input type="text" size="large" v-model="passwordForm.code" auto-complete="off" placeholder="请输入6位邮箱验证码">
                 <template slot="append">获取验证码</template>
               </el-input>
             </el-form-item>
             <el-form-item>
-              <el-button type="primary form-btn">下一步</el-button>
+              <el-button type="primary" size="large">下一步</el-button>
             </el-form-item>
           </el-form>
           <div class="signup-password-desc">

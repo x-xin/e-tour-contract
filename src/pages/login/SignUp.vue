@@ -21,25 +21,24 @@
               <span class="type"><i class="cncn-icon-enterprise"></i>企业用户</span>
             </el-form-item>
             <el-form-item label="企业邮箱：" prop="email">
-              <el-input type="email" v-model="signupForm.email" auto-complete="off" placeholder="该邮箱作为账号登录"></el-input>
+              <el-input type="email" size="large" v-model="signupForm.email" auto-complete="off" placeholder="该邮箱作为账号登录"></el-input>
             </el-form-item>
             <el-form-item label="登录密码：" prop="pass">
-              <el-input type="password" v-model="signupForm.pass" auto-complete="off" placeholder="请设置登录密码"></el-input>
+              <el-input type="password" size="large" v-model="signupForm.pass" auto-complete="off" placeholder="请设置登录密码"></el-input>
             </el-form-item>
             <el-form-item label="确认密码：" prop="checkPass">
-              <el-input type="password" v-model="signupForm.checkPass" auto-complete="off" placeholder="请再次输入登录密码"></el-input>
+              <el-input type="password" size="large" v-model="signupForm.checkPass" auto-complete="off" placeholder="请再次输入登录密码"></el-input>
             </el-form-item>
             <el-form-item label="验证码：" prop="code">
-              <el-input type="password" v-model="signupForm.code" auto-complete="off" placeholder="请输入验证码">
+              <el-input type="text" size="large" v-model="signupForm.code" auto-complete="off" placeholder="请输入验证码">
                 <template slot="append"><img class="code-img" src="../../assets/code.jpg"></template>
               </el-input>
-              
             </el-form-item>
             <el-form-item>
-              <el-radio class="radio protocol" v-model="radio" label="3">同意<a href="#">《福建智慧旅游电子合同协议》</a></el-radio>
+              <el-checkbox v-model="checked">同意<a href="#">《福建智慧旅游电子合同协议》</a></el-checkbox>
             </el-form-item>
             <el-form-item>
-              <el-button type="primary form-btn">下一步</el-button>
+              <el-button type="primary" size="large" :disabled="!checked">下一步</el-button>
             </el-form-item>
           </el-form>
           <div class="signup-password-desc">
@@ -83,7 +82,7 @@ export default {
           { message: '请再次验证码', trigger: 'blur' }
         ]
       },
-      radio: '1'
+      checked: true
     }
   },
   components: {
