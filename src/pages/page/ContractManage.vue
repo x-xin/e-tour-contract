@@ -2,7 +2,11 @@
   <div class="cncn-main-wrap">
     <div class="cncn-main-wrap-2">
       <div class="cncn-main">
-        <div class="cncn-main-con">
+        <el-card class="box-card">
+          <div slot="header" class="clearfix">
+            <span>合同管理</span>
+            <!-- <el-button style="float: right;" type="primary">操作按钮</el-button> -->
+          </div>
           <el-form :inline="true" :model="chioceForm" class="chioceForm">
             <el-form-item label="甲方代表：">
               <el-input v-model="chioceForm.present" placeholder="甲方代表"></el-input>
@@ -32,6 +36,8 @@
               <el-button type="primary">查询</el-button>
             </el-form-item>
           </el-form>
+        </el-card>
+        <div class="cncn-main-con nobgcolor">
           <el-table :data="tableData" style="width: 100%" border>
             <el-table-column fixed='left' prop="id" label="ID" min-width="80"></el-table-column>
             <el-table-column prop="num" label="合同编号" min-width="180"></el-table-column>
@@ -201,16 +207,26 @@ export default {
       // getCurrentData
     },
     handleClick () {
-      console.log('handleClick')
+      this.$confirm('确定要上架吗, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        this.$message({
+          type: 'success',
+          message: '上架成功!'
+        })
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '已取消上架'
+        })
+      })
     }
   }
 }
 </script>
 <style lang="stylus">
-
   .chioceForm
     text-align left
-
-  .el-pagination
-    margin-top 20px
 </style>
