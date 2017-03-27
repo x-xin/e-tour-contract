@@ -56,6 +56,7 @@ export default {
   background-color #2a3542
   overflow: hidden
   z-index 5
+  box-shadow 1px 0px 1px 0px rgb(14, 47, 71)
   .el-col-24
     width auto
     height 100%

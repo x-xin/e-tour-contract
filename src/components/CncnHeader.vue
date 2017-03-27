@@ -72,6 +72,7 @@ export default {
   background-color #0e2f47
   z-index 5
   overflow hidden
+  box-shadow 0 1px 1px 0px rgb(14, 47, 71)
   .logo
     padding-left 20px
     span
